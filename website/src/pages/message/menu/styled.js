@@ -30,11 +30,6 @@ const Container = styled.div`
     width:100%;
     height: 25%;
 
-    img{
-      width: 50%;
-      border-radius: 50%;
-    }
-
     font-family: 'TT Norms';
     font-size: 18px;
     line-height: 21px;

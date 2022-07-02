@@ -1,16 +1,23 @@
-import { Container } from "./styled";
+import { ButtonRadius } from '../../../components/common/style/button';
+import { PhotoImg } from '../../../components/common/style/imgPhoto';
+import { Container } from './styled';
 
-export function Index(props) {
-  const {name, photoUrl, status} = props.data;
-
+export default function Index(props) {
+  const {name, photoUrl, status} = props.user;
   return(
     <Container>
       <div className="head">
-        <img src={photoUrl} alt="perfil-icon"/>
+        <PhotoImg src={photoUrl} alt="perfil-icon"/>
         <div className="information">
-          <div>{name}</div>
-          <div>{status}</div>
+          <div className='name'>{name}</div>
+          <div className='status'>{status}</div>
         </div>
+        <ButtonRadius className='options'>
+          <img src="/src/assets/img/Icon-Outline-attach-2.svg" alt="clip-icon"/>
+        </ButtonRadius>
+        <ButtonRadius className='options'>
+          <img src="/src/assets/img/Icon-Outline-more-vertical.svg" alt="clip-icon"/>
+        </ButtonRadius>
       </div>
     </Container>
   )

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Option } from './styled';
+import { PhotoImg } from '../../../components/common/style/imgPhoto';
 
 export default function index(props) {
   const options = [
@@ -29,7 +30,7 @@ export default function index(props) {
   return(
     <Container>
       <div className='informationUser'>
-        <img src={`${photoUrl}`} alt="profile-user"/>
+        <PhotoImg src={`${photoUrl}`} alt="profile-user"/>
         <span>{name}</span>
       </div>
       <div className='options'>

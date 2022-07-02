@@ -1,12 +1,14 @@
 import { Container } from "./styled";
 
 import Menu from './menu/';
-import Chats from './chats/'
+import Chats from './chats/';
+import Chat from './chat/';
 
 export default function Index() {
   const user = {
     name: 'Erik Benito',
-    photoUrl: '/src/assets/img/230858051_987862795152669_6182166523953925644_n.jpg'
+    photoUrl: '/src/assets/img/230858051_987862795152669_6182166523953925644_n.jpg',
+    status: 'OFFLINE'
   }
   const messages = [
     {
@@ -148,6 +150,7 @@ export default function Index() {
     <Container>
         <Menu user={user}/>
         <Chats messages={messages}/>
+        <Chat user={user}/>
     </Container>
   );
 }
