@@ -26,7 +26,6 @@ export default function index(props) {
   ]
   const [select, setSelect] = useState(options[0].title);
   const {name, photoUrl} = props.user;
-
   return(
     <Container>
       <div className='informationUser'>
